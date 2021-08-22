@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<%- include('./template/head') %>
+	<title>Document</title>
+</head>
+
+<body>
+	<%- include('./template/navbar') %>
+	<div class="container">
+
+		<% if(errorMessage && errorMessage.length > 0) {  %>
+		<div class="alert alert-danger" role="alert">
+			<%= errorMessage %>
+		</div>
+		<% } %>
+		<form method="POST" action="/add-handle">
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">獎項種類</label>
+				<div class="col-sm-5">
+					<input name="type"" type=" text" class="form-control">
+				</div>
+				<div class="col-sm-5">
+					<input name="index"" type="number" class="form-control" placeholder="輸入獎項索引">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">獎項名稱</label>
+				<div class="col-sm-10">
+					<input name="prize" type="text" class="form-control">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">獎項說明</label>
+				<div class="col-sm-10">
+					<input name="description" type="text" class="form-control">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">圖形位置</label>
+				<div class="col-sm-10">
+					<input name="url" type="text" class="form-control">
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2 col-form-label">中獎機率</label>
+				<div class="col-sm-10">
+					<input name="probability" type="number"" class=" form-control">
+				</div>
+			</div>
+			<button type="submit" class="btn btn-primary">新增</button>
+		</form>
+	</div>
+</body>
+
+</html>

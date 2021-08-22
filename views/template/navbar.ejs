@@ -1,0 +1,16 @@
+
+<nav class="navbar navbar-light bg-light mb-3">
+		<a class="navbar-brand" href="/">Lottery Management</a>
+		<ul class="navbar-nav me-auto">
+        <li class="nav-item d-flex">
+					<% if (userId) { %>
+					<a class="nav-link ml-3" href="/add">新增獎項</a>
+					<a class="nav-link ml-3" href="/users">會員列表</a>
+					<a class="nav-link ml-3" href="/logout">登出</a>
+					<% } else { %>
+					<a class="nav-link ml-3" href="/register">註冊</a>
+					<a class="nav-link ml-3" href="/login">登入</a>
+					<% } %>
+				</li>
+		</ul>
+	</nav>
